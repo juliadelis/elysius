@@ -47,7 +47,7 @@ export default function Navbar() {
         </a>
 
         {/* Links desktop */}
-        <ul className="hidden gap-6 md:flex">
+        <ul className="hidden gap-28 md:flex">
           {links.map((item) => (
             <li key={item.href}>
               <a
