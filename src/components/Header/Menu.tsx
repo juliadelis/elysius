@@ -64,15 +64,15 @@ export default function Navbar() {
         {/* Botão hambúrguer (mobile) */}
         <button
           type="button"
-          className="md:hidden  inline-flex items-center justify-center rounded-md color-[#020A17] "
+          className="md:hidden transition-all ease-in-out inline-flex items-center justify-center rounded-md color-[#020A17] "
           aria-controls="mobile-menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}>
           <span className="sr-only">Abrir menu</span>
           {open ? (
-            <IoClose color="#020A17" size={20} />
+            <IoClose color="#020A17" size={28} />
           ) : (
-            <IoMenuOutline color="#020A17" size={20} />
+            <IoMenuOutline color="#020A17" size={28} />
           )}
         </button>
       </nav>
