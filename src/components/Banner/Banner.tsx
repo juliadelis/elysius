@@ -13,10 +13,10 @@ export default function Banner() {
   const [fixed, setFixed] = useState(false);
   const [bottomLock, setBottomLock] = useState(false);
 
-  const PARALLAX_STRENGTH = 160;
+  const PARALLAX_STRENGTH = 60;
 
   useEffect(() => {
-    let raf = 0;
+    let raf = 160;
 
     const onScroll = () => {
       cancelAnimationFrame(raf);
@@ -76,7 +76,9 @@ export default function Banner() {
             />
           </div>
 
-          <p className=" h-[70vh] max-w-[520px] text-left text-xl leading-relaxed text-[#020A17]/80">
+          <p
+            id="about"
+            className=" font-light  h-[70vh] max-w-[520px] text-left text-xl leading-relaxed text-[#020A17]/80">
             Elysius é um servidor de roleplay para GTA focado na cultura da
             mitologia grega. Destinada para bravos corações, quem escolhe o
             caminho a ser seguido é você. Sua evolução, destino, escolhas,
@@ -103,7 +105,7 @@ export default function Banner() {
               width={736}
               style={{
                 position: fixed ? "fixed" : "absolute",
-                marginTop: "-1%",
+                marginTop: "-22%",
                 top: fixed
                   ? 0
                   : bottomLock

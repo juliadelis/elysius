@@ -6,7 +6,7 @@ import { IoClose, IoMenuOutline } from "react-icons/io5";
 
 const links = [
   { href: "#about", label: "Sobre" },
-  { href: "#epilogue", label: "Epílogo" },
+  { href: "#epiloge", label: "Epílogo" },
   { href: "#galery", label: "Galeria" },
   { href: "#contact", label: "Contato" },
 ];
