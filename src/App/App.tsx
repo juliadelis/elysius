@@ -8,6 +8,7 @@ import Navbar from "../components/Header/Menu";
 import TextParallax from "../components/TextParallax/TextParallax";
 import "./App.css";
 import ZoomParallax from "../components/ZoomPic/ZoomParallax";
+import Contact from "../components/Contact/Contact";
 
 function App() {
   const rafId = useRef<number | null>(null);
@@ -32,6 +33,7 @@ function App() {
       <Epiloge />
       <TextParallax />
       <ZoomParallax />
+      <Contact />
       <Footer />
     </>
   );
