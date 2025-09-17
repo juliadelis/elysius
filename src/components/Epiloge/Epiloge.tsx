@@ -2,10 +2,14 @@ export default function Epiloge() {
   return (
     <section
       id="epiloge"
-      className="relative w-[102vw] xl:w-full xl:container mx-auto xl:rounded-[32px] bg-[#020A17] mb-12 md:mb-80 left-[-99vw] xl:left-[-83vw] md:left-[-85vw]">
+      className="relative container mx-auto xl:rounded-[32px] bg-[#020A17] mb-12 md:mb-80 w-[100vw] ">
       <div className=" px-4 grid grid-cols-12 gap-6">
         <div className="hidden xl:flex h-full content-end col-span-5 ">
-          <img className=" h-auto" src="/img/poseidon_estatua_2.png" alt="" />
+          <img
+            className="self-end h-max w-auto"
+            src="/img/poseidon_estatua_2.png"
+            alt=""
+          />
         </div>
 
         <div className="mt-[30px] col-span-12   xl:col-span-7 flex flex-col gap-4  text-[#FFFFFF]  md:ml-auto self-center py-12 px-4 xl:py-28 xl:pr-8">
