@@ -2,7 +2,7 @@ export default function Epiloge() {
   return (
     <section
       id="epiloge"
-      className="relative container mx-auto rounded-[32px] bg-[#020A17] mb-12 md:mb-80 l-[-82vw]">
+      className="relative container mx-auto rounded-[32px] bg-[#020A17] mb-12 md:mb-80 left-[-82vw]">
       <div className=" px-4 grid grid-cols-12 gap-6">
         <div className=" h-full content-end col-span-5 ">
           <img className=" h-auto" src="/img/poseidon_estatua_2.png" alt="" />

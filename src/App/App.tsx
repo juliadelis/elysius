@@ -7,6 +7,7 @@ import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Header/Menu";
 import TextParallax from "../components/TextParallax/TextParallax";
 import "./App.css";
+import ZoomParallax from "../components/ZoomPic/ZoomParallax";
 
 function App() {
   const rafId = useRef<number | null>(null);
@@ -30,6 +31,7 @@ function App() {
       <Banner />
       <Epiloge />
       <TextParallax />
+      <ZoomParallax />
       <Footer />
     </>
   );

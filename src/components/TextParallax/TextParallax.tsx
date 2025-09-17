@@ -3,19 +3,16 @@ import Picture from "/public/img/stone-pillar.png";
 import { useRef } from "react";
 
 export default function TextParallax() {
-  // agora este container engloba spacers + slides
   const container = useRef<HTMLDivElement | null>(null);
 
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ["start end", "end start"], // mantém o mesmo offset
+    offset: ["start end", "end start"],
   });
 
   return (
     <section className="overflow-hidden">
-      {/* tudo dentro do container para o progress mapear igual ao que você já sentia */}
       <div ref={container}>
-        {/* <div className="h-[100vh]" /> */}
         <div>
           <Slide
             src={Picture}
