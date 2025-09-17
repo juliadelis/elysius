@@ -32,7 +32,7 @@ export default function TextParallax() {
           <Slide
             src={Picture}
             direction={"left"}
-            left={"-75%"}
+            left={"-15%"}
             progress={scrollYProgress}
           />
         </div>
