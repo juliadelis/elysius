@@ -29,7 +29,7 @@ export default function Navbar() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all ",
+        "fixed inset-x-0 top-0 z-50 transition-all w-[100vw]",
         open
           ? "bg-white/95 shadow"
           : scrolled

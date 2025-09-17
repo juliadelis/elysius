@@ -2,13 +2,13 @@ export default function Epiloge() {
   return (
     <section
       id="epiloge"
-      className="relative container mx-auto rounded-[32px] bg-[#020A17] mb-12 md:mb-80 left-[-82vw]">
+      className="relative w-[102vw] xl:w-full xl:container mx-auto xl:rounded-[32px] bg-[#020A17] mb-12 md:mb-80 left-[-99vw] xl:left-[-83vw] md:left-[-85vw]">
       <div className=" px-4 grid grid-cols-12 gap-6">
-        <div className=" h-full content-end col-span-5 ">
+        <div className="hidden xl:flex h-full content-end col-span-5 ">
           <img className=" h-auto" src="/img/poseidon_estatua_2.png" alt="" />
         </div>
 
-        <div className="mt-[30px]  col-span-7 flex flex-col gap-4  text-[#FFFFFF] ml-auto self-center py-28 pr-8">
+        <div className="mt-[30px] col-span-12   xl:col-span-7 flex flex-col gap-4  text-[#FFFFFF]  md:ml-auto self-center py-12 px-4 xl:py-28 xl:pr-8">
           <h3 className="w-fit text-left font-glamore uppercase text-[36px]">
             ATO I: O Silêncio dos Monstros
           </h3>
@@ -25,6 +25,10 @@ export default function Epiloge() {
             está mais perto do que nunca. Por isso, mortal, lembre-se de quem
             você é!
           </p>
+        </div>
+
+        <div className="block xl:hidden h-full content-end col-span-12 ">
+          <img className=" h-auto" src="/img/poseidon_estatua_2.png" alt="" />
         </div>
       </div>
     </section>

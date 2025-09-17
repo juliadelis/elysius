@@ -12,6 +12,7 @@ export default function TextParallax() {
 
   return (
     <section className="overflow-hidden">
+      <div className="md:hidden h-[10vh]" />
       <div ref={container}>
         <div>
           <Slide
@@ -33,7 +34,7 @@ export default function TextParallax() {
             progress={scrollYProgress}
           />
         </div>
-        <div className="h-[30vh]" />
+        <div className="h-[10vh] md:h-[30vh]" />
       </div>
     </section>
   );

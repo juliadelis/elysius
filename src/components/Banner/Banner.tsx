@@ -65,7 +65,7 @@ export default function Banner() {
         <div
           ref={leftRef}
           className="col-span-12 md:col-span-5 flex flex-col justify-start">
-          <div className="h-[100vh] mt-11 md:mt-38 self-center text-[#020A17]">
+          <div className="h-full mb-16 md:mb-0 md:h-[100vh] mt-11 md:mt-38 self-center text-[#020A17]">
             <img
               height={348}
               width={650}
@@ -77,7 +77,7 @@ export default function Banner() {
 
           <p
             id="about"
-            className=" font-light  h-[70vh] max-w-[520px] text-left text-xl leading-relaxed text-[#020A17]/80">
+            className=" font-light mb-32 md:mb-0 h-full md:h-[70vh] max-w-[520px] text-left text-xl leading-relaxed text-[#020A17]/80">
             Elysius é um servidor de roleplay para GTA focado na cultura da
             mitologia grega. Destinada para bravos corações, quem escolhe o
             caminho a ser seguido é você. Sua evolução, destino, escolhas,
