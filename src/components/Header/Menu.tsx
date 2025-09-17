@@ -7,7 +7,7 @@ import { IoClose, IoMenuOutline } from "react-icons/io5";
 const links = [
   { href: "#about", label: "Sobre" },
   { href: "#epiloge", label: "Epílogo" },
-  { href: "#galery", label: "Galeria" },
+  { href: "#gallery", label: "Galeria" },
   { href: "#contact", label: "Contato" },
 ];
 export default function Navbar() {

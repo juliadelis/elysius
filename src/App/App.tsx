@@ -9,6 +9,7 @@ import TextParallax from "../components/TextParallax/TextParallax";
 import "./App.css";
 import ZoomParallax from "../components/ZoomPic/ZoomParallax";
 import Contact from "../components/Contact/Contact";
+import Gallery from "../components/Gallery/Gallery";
 
 function App() {
   const rafId = useRef<number | null>(null);
@@ -33,6 +34,7 @@ function App() {
       <Epiloge />
       <TextParallax />
       <ZoomParallax />
+      <Gallery />
       <Contact />
       <Footer />
     </>
