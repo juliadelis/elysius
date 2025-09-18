@@ -4,11 +4,18 @@ import { useEffect, useState } from "react";
 import { useScrolled } from "../../shared/hooks/useScrolled.tsx";
 import { IoClose, IoMenuOutline } from "react-icons/io5";
 
+const scrollToSection = (id: string) => {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
 const links = [
-  { href: "#about", label: "Sobre" },
-  { href: "#epiloge", label: "Epílogo" },
-  { href: "#gallery", label: "Galeria" },
-  { href: "#contact", label: "Contato" },
+  { href: () => scrollToSection("about"), label: "Sobre" },
+  { href: () => scrollToSection("epiloge"), label: "Epílogo" },
+  { href: () => scrollToSection("gallery"), label: "Galeria" },
+  { href: () => scrollToSection("contact"), label: "Contato" },
 ];
 export default function Navbar() {
   const scrolled = useScrolled(8);
@@ -38,9 +45,9 @@ export default function Navbar() {
       )}>
       <nav className="mx-auto flex container items-center justify-between px-4  sm:px-6 lg:px-8">
         <a
-          href="#"
+          onClick={() => scrollToSection("")}
           className={cn(
-            "transition-all delay-50 duration-200 ease-in-out text-lg font-regular tracking-widest no-underline  ",
+            "cursor-pointer transition-all delay-50 duration-200 ease-in-out text-lg font-regular tracking-widest no-underline  ",
             textBase
           )}>
           Home
@@ -49,11 +56,11 @@ export default function Navbar() {
         {/* Links desktop */}
         <ul className="hidden gap-28 md:flex">
           {links.map((item) => (
-            <li key={item.href}>
+            <li key={item.label}>
               <a
-                href={item.href}
+                onClick={item.href}
                 className={cn(
-                  "transition-all ease-in-out  font-regular tracking-widest"
+                  "cursor-pointer transition-all ease-in-out  font-regular tracking-widest"
                 )}>
                 {item.label}
               </a>
