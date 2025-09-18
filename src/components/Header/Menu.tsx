@@ -12,10 +12,10 @@ const scrollToSection = (id: string) => {
 };
 
 const links = [
-  { href: () => scrollToSection("about"), label: "Sobre" },
-  { href: () => scrollToSection("epiloge"), label: "Epílogo" },
-  { href: () => scrollToSection("gallery"), label: "Galeria" },
-  { href: () => scrollToSection("contact"), label: "Contato" },
+  { href: "about", label: "Sobre" },
+  { href: "epiloge", label: "Epílogo" },
+  { href: "gallery", label: "Galeria" },
+  { href: "contact", label: "Contato" },
 ];
 export default function Navbar() {
   const scrolled = useScrolled(8);
@@ -45,7 +45,7 @@ export default function Navbar() {
       )}>
       <nav className="mx-auto flex container items-center justify-between px-4  sm:px-6 lg:px-8">
         <a
-          onClick={() => scrollToSection("")}
+          onClick={() => scrollToSection("topo")}
           className={cn(
             "cursor-pointer transition-all delay-50 duration-200 ease-in-out text-lg font-regular tracking-widest no-underline  ",
             textBase
@@ -58,7 +58,7 @@ export default function Navbar() {
           {links.map((item) => (
             <li key={item.label}>
               <a
-                onClick={item.href}
+                onClick={() => scrollToSection(item.href)}
                 className={cn(
                   "cursor-pointer transition-all ease-in-out  font-regular tracking-widest"
                 )}>
@@ -97,10 +97,12 @@ export default function Navbar() {
           <div className="h-[1px] w-full bg-[#D3D7DA]" />
           <ul className="space-y-3 py-2">
             {links.map((item) => (
-              <li key={item.href}>
+              <li key={item.label}>
                 <a
-                  href={item.href}
-                  onClick={() => setOpen(false)}
+                  onClick={() => {
+                    setOpen(false);
+                    scrollToSection(item.href);
+                  }}
                   className="block rounded-md px-2 py-2 text-lg  tracking-widest text-[#311910] hover:bg-[#311910]/5">
                   {item.label}
                 </a>

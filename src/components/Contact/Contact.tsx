@@ -1,4 +1,4 @@
-import { AiFillTikTok } from "react-icons/ai";
+import { AiFillTikTok, AiFillYoutube } from "react-icons/ai";
 import { BiLogoDiscordAlt, BiLogoInstagramAlt } from "react-icons/bi";
 
 export default function Contact() {
@@ -12,18 +12,28 @@ export default function Contact() {
             Onde nos encontrar
           </h3>
           <div className="flex flex-wrap gap-12 justify-evenly">
-            <a href="/" className="flex gap-4">
+            <a
+              href="https://www.instagram.com/elysiusrp"
+              className="flex gap-4">
               <BiLogoInstagramAlt color="#0B1C3A" size={38} />
 
-              <p className="self-center">@elysius</p>
+              <p className="self-center">@elysiusrp</p>
             </a>
-            <a href="/" className="flex gap-4">
+            <a href="https://discord.gg/elysius" className="flex gap-4">
               <BiLogoDiscordAlt color="#0B1C3A" size={38} />
               <p className="self-center">@elysius</p>
             </a>
-            <a href="/" className="flex gap-4 align-middle justify-center">
+            <a
+              href="https://www.tiktok.com/@elysiusrp"
+              className="flex gap-4 align-middle justify-center">
               <AiFillTikTok color="#0B1C3A" size={38} />
-              <p className="self-center">@elysius</p>
+              <p className="self-center">@elysiusrp</p>
+            </a>
+            <a
+              href="https://www.youtube.com/@ElysiusRP"
+              className="flex gap-4 align-middle justify-center">
+              <AiFillYoutube color="#0B1C3A" size={38} />
+              <p className="self-center">@ElysiusRP</p>
             </a>
           </div>
         </div>

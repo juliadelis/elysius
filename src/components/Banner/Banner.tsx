@@ -59,6 +59,7 @@ export default function Banner() {
 
   return (
     <section
+      id="topo"
       className="relative w-screen overflow-hidden px-4  "
       style={{ minHeight: "80vh" }}>
       <div className="container mx-auto grid grid-cols-12 gap-6 items-start pt-8">
