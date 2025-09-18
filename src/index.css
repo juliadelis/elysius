@@ -85,7 +85,7 @@ button:hover {
 }
 .swiper-button-prev,
 .swiper-button-next {
-  color: #020a17 !important;
+  color: grey !important;
 }
 
 .swiper-scrollbar {

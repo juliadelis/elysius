@@ -1,13 +1,13 @@
 import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
 import { useRef } from "react";
 
-import Picture1 from "/public/img/1.jpeg";
-import Picture2 from "/public/img/2.jpeg";
-import Picture3 from "/public/img/3.jpg";
-import Picture4 from "/public/img/4.jpg";
-import Picture5 from "/public/img/5.jpg";
-import Picture6 from "/public/img/6.jpg";
-import Picture7 from "/public/img/7.jpeg";
+import Picture1 from "/public/img/elysius/1.png";
+import Picture2 from "/public/img/elysius/2.png";
+import Picture3 from "/public/img/elysius/3.png";
+import Picture4 from "/public/img/elysius/4.png";
+import Picture5 from "/public/img/elysius/5.png";
+import Picture6 from "/public/img/elysius/6.png";
+import Picture7 from "/public/img/elysius/7.png";
 
 type PictureDef = {
   src: string;
