@@ -107,7 +107,7 @@ export default function Gallery({
       </div>
 
       <div className="w-[100vw] py-28">
-        <img src={adorno} alt="adorno" />
+        <img src={adorno} className="w-[100vw]" alt="adorno" />
       </div>
     </section>
   );
