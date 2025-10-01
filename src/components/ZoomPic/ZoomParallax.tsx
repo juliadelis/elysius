@@ -73,9 +73,7 @@ export default function ZoomParallax() {
   ];
 
   return (
-    <section
-      ref={container2}
-      className=" h-[300vh] relative m-auto mb-[100px] w-[100vw]">
+    <section ref={container2} className=" h-[300vh] relative m-auto mb-[100px]">
       <div className="sticky overflow-hidden top-0 h-[100vh]">
         {pictures.map(({ src, scale, positionClass }, index) => {
           return (

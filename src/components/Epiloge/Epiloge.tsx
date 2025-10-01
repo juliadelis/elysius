@@ -2,7 +2,7 @@ export default function Epiloge() {
   return (
     <section
       id="epiloge"
-      className="relative container mx-auto xl:rounded-[32px] bg-[#020A17] mb-12 md:mb-80 w-[100vw] ">
+      className="relative container mx-auto xl:rounded-[32px] bg-[#020A17] mb-12 md:mb-80 ">
       <div className=" px-4 grid grid-cols-12 gap-6">
         <div className="hidden xl:flex h-full content-end col-span-5 ">
           <img

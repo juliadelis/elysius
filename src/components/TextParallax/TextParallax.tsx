@@ -11,7 +11,7 @@ export default function TextParallax() {
   });
 
   return (
-    <section className="overflow-hidden w-[100vw]">
+    <section className="overflow-hidden">
       <div className="md:hidden h-[10vh]" />
       <div ref={container}>
         <div>

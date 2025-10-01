@@ -62,7 +62,7 @@ export default function Banner() {
     : {
         ...baseStyle,
         position: "fixed",
-        marginTop: "-14%",
+        marginTop: "-180px",
         top: leftRef.current?.offsetTop ?? 0,
         transform: `translateY(${offset}px)`,
         willChange: "transform",
@@ -71,7 +71,7 @@ export default function Banner() {
   return (
     <section
       id="topo"
-      className="relative w-screen px-4  "
+      className="relative px-4 max-w-full"
       style={{ minHeight: "80vh" }}>
       <div className="container mx-auto grid grid-cols-12 gap-6 items-start pt-8 md:mb-[-20px]">
         <div

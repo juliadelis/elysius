@@ -28,7 +28,7 @@ function App() {
     };
   }, []);
   return (
-    <div className="w-[98vw] overflow-hidden">
+    <div id="test">
       <Navbar />
       <Banner />
       <Epiloge />

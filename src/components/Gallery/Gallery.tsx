@@ -66,9 +66,9 @@ export default function Gallery({
   images = DEFAULT_IMAGES,
 }: GalleryCarouselProps) {
   return (
-    <section id="gallery" className="w-screen  mb-10">
-      <div className="w-[100vw] py-28">
-        <img src={adorno} className="w-[100vw]" alt="adorno" />
+    <section id="gallery" className="max-w-full mb-10">
+      <div className=" py-28">
+        <img src={adorno} className="w-full" alt="adorno" />
       </div>
 
       <div className="container flex m-auto px-4 mb-8">
@@ -106,8 +106,8 @@ export default function Gallery({
         </Swiper>
       </div>
 
-      <div className="w-[100vw] py-28">
-        <img src={adorno} className="w-[100vw]" alt="adorno" />
+      <div className=" py-28">
+        <img src={adorno} className="w-full" alt="adorno" />
       </div>
     </section>
   );

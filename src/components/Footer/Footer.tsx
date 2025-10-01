@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="justify-between mb-[40px] w-[100vw] flex flex-col px-4 ">
+    <footer className="justify-between mb-[40px] flex flex-col px-4 ">
       <div className="flex flex-col gap-11">
         <div className="h-[1px] w-full  bg-[#D9D9D9]" />
         <div className="h-[1px] w-full  bg-[#D9D9D9]" />
