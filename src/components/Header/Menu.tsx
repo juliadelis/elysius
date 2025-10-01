@@ -21,7 +21,7 @@ export default function Navbar() {
   const scrolled = useScrolled(8);
   const [open, setOpen] = useState(false);
 
-  const textBase = scrolled ? " py-9" : " py-9 ";
+  const textBase = scrolled ? " py-4" : " py-9 ";
 
   useEffect(() => {
     document.body.classList.toggle("overflow-hidden", open);
