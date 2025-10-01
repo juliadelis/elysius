@@ -28,19 +28,28 @@ export default function Banner() {
         const scrollTop = window.scrollY + vh - leftRef.current.offsetTop - vh;
 
         const progress = clamp(scrollTop / total, 0, 1);
+        // console.log(progress);
+        // console.log(PARALLAX_STRENGTH);
         setOffset(-progress * PARALLAX_STRENGTH);
 
         const topLimit = leftRef.current.offsetTop;
         const bottomLimit =
           leftRef.current.offsetTop + leftRef.current.offsetHeight - vh;
 
+        setFixed(false);
+        setBottomLock(true);
         if (window.scrollY >= topLimit && window.scrollY <= bottomLimit) {
+          // console.log("fixed - not locked");
+
           setFixed(true);
           setBottomLock(false);
         } else if (window.scrollY > bottomLimit) {
+          // console.log("not fixed - locked");
           setFixed(false);
           setBottomLock(true);
         } else {
+          // console.log("not fixed - not locked");
+
           setFixed(false);
           setBottomLock(false);
         }
@@ -60,7 +69,7 @@ export default function Banner() {
   return (
     <section
       id="topo"
-      className="relative w-screen overflow-hidden px-4  "
+      className="relative w-screen px-4  "
       style={{ minHeight: "80vh" }}>
       <div className="container mx-auto grid grid-cols-12 gap-6 items-start pt-8">
         <div
@@ -91,13 +100,13 @@ export default function Banner() {
 
         <div
           ref={rightRef}
-          className="col-span-12 hidden md:flex md:col-span-7 relative self-start h-full "
+          className="col-span-12 hidden md:flex md:col-span-7 self-start"
           style={{ minHeight: leftRef.current?.offsetHeight || "100vh" }}>
           <div
-            className="relative w-full h-full overflow-hidden"
+            className="w-full"
             style={{
-              height: leftRef.current?.offsetHeight || "100vh",
-              position: "relative",
+              position: "sticky",
+              top: 0, // stick at top of viewport
             }}>
             <img
               src="/img/poseidon_estatua_1.png"
@@ -107,10 +116,12 @@ export default function Banner() {
                 position: fixed ? "fixed" : "absolute",
                 marginTop: "-22%",
                 top: fixed
-                  ? 0
+                  ? leftRef.current?.offsetTop ?? 0 // lock to parent’s top when fixed
                   : bottomLock
-                  ? (leftRef.current?.offsetHeight || 0) - window.innerHeight
-                  : 0,
+                  ? (leftRef.current?.offsetHeight || 0) -
+                    window.innerHeight +
+                    (leftRef.current?.offsetTop || 0)
+                  : leftRef.current?.offsetTop ?? 0, // natural flow position
 
                 transform: `translateY(${offset}px)`,
                 willChange: "transform",

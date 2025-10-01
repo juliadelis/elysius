@@ -28,7 +28,7 @@ function App() {
     };
   }, []);
   return (
-    <>
+    <div className="w-[98vw] overflow-hidden">
       <Navbar />
       <Banner />
       <Epiloge />
@@ -37,7 +37,7 @@ function App() {
       <Gallery />
       <Contact />
       <Footer />
-    </>
+    </div>
   );
 }
 
